@@ -1,0 +1,25 @@
+{
+  "name": "mongo_node_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./test/test_helper.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SOunit/mongo_node_tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SOunit/mongo_node_tests/issues"
+  },
+  "homepage": "https://github.com/SOunit/mongo_node_tests#readme",
+  "dependencies": {
+    "mocha": "^8.2.1",
+    "mongoose": "^5.10.15",
+    "nodemon": "^2.0.6"
+  }
+}
