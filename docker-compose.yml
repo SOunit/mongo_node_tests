@@ -8,3 +8,7 @@ services:
       dockerfile: Dockerfile.dev
       context: ./
     restart: always
+    volumes:
+      - ./app/node_modules
+      - ./src:/app/src
+      - ./test:/app/test
