@@ -2,7 +2,7 @@
 mongo practice code files!
 
 # how to run
-## setup docker
+## start docker
 - docker-compose up --build
 
 ## run test
