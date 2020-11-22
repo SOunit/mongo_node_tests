@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "start": "nodemon -L ./test/test_helper.js"
+    "test": "nodemon -L --exec 'mocha -R min'"
   },
   "repository": {
     "type": "git",
