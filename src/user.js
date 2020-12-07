@@ -11,8 +11,14 @@ const UserSchema = new Schema({
     },
     required: [true, 'Name is required.'],
   },
-  postCount: Number,
   posts: [PostSchema],
+  likes: Number,
+});
+
+// this here needs function, not arrow function
+// so that this points to correct object
+UserSchema.virtual('postCount').get(function () {
+  return this.posts.length;
 });
 
 // behind scene,
