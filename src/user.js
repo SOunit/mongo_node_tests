@@ -13,12 +13,22 @@ const UserSchema = new Schema({
   },
   posts: [PostSchema],
   likes: Number,
+  blogPosts: [{ type: Schema.Types.ObjectId, ref: 'blogPost' }],
 });
 
 // this here needs function, not arrow function
 // so that this points to correct object
 UserSchema.virtual('postCount').get(function () {
   return this.posts.length;
+});
+
+UserSchema.pre('remove', function (next) {
+  const BlogPost = mongoose.model('blogPost');
+  // this === joe
+
+  BlogPost.remove({ _id: { $in: this.blogPosts } }).then(() => {
+    next();
+  });
 });
 
 // behind scene,
