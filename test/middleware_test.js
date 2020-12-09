@@ -21,7 +21,7 @@ describe('Middleware', () => {
     joe
       .remove()
       .then(() => {
-        BlogPost.count();
+        return BlogPost.count();
       })
       .then((count) => {
         assert(count === 0);
